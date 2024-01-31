@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="./appjs/app.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <style>
+      /* TODO */
+    </style>
+
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">Mobile app</div>
+      </div>
+
+
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="page2">Dashboard</div>
+        </div>
+        <div class="app-section">
+          <div class="app-button" data-target="page3">Blog Page</div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="app-page" data-page="page2">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Page 2</div>
+      </div>
+
+      <div class="app-content">
+        Page 2 is lonely
+      </div>
+
+    </div>
+
+
+
+    <div class="app-page" data-page="page3">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Blogs</div>
+      </div>
+      <div class="app-content">
+        <div class="bODy">
+
+
+          <div class="welcome-container">
+
+            <div class="welcome-page">
+              <span id="welcome">WELCOME TO MY BLOG APP</span>
+            </div>
+    
+            <div id="action-status">
+              <button>STATUS.</button>
+            </div>
+    
+            <div class="choseactioncontainer">
+              <button id="view-post">View Post</button>
+              <button id="make-post">Post</button>
+            </div>
+    
+          </div>
+    
+         <!-- retrieved post section -->
+    
+          <div class="view-blog-result-container">
+    
+              <div class="butt-cont">
+                  <button id="to-home-page">Home</button>
+                  <button id="get-post request">Get Post</button>
+              </div>
+    
+              <div id="post-contents-retrieved">
+                 
+              </div>
+    
+            
+            
+    
+            
+          </div>
+    
+          <!-- post making form -->
+    
+          <div class="make-post-contaner">
+            <form class="fOrm">
+    
+             
+    
+              <div class="username-control">
+                <div class="label_e">
+                 <label for="mAIL">Categories</label>
+                  <p id="error_user_name">This field is required</p>
+                </div>
+                 <input id="user-name" placeholder="e.g Rioting, Accident">
+              </div>
+    
+    
+              <div class="titlecontrol">
+                <div class="label_e">
+                  <label for="fullName">title</label>
+                  <p id="error_title">This field is required</p>
+                </div>
+                <input id="content-title" type="text" placeholder="API Class">
+              </div>
+    
+    
+             <div class="contentcontrol">
+                <div class="label_e">
+                  <label for="number">content</label>
+                  <p id="error_content">This field is required</p>
+                </div>
+                  <input id="post-content-oveview" type="text" placeholder="lorem ipsum lorem ipsum lorem ipsum lorem ">
+              </div>
+    
+              <div class="submit-button-container">
+                <button id="submit-post" type="submit">Verify Details</button>
+                <button id="make-post-req">Make Post</button>
+              </div>
+              
+            </form>
+    
+            <!-- success message section -->
+    
+            <div class="sucess_message">
+              <p id="success">PROCESSING</p>
+              <div class="bak-butt-cont">
+                <button id="back-to-welcome-from-post-success">WELCOME PAGE</button>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    
+
+          
+          
+
+        </div>
+
+    
+      </div>
+    </div>
+
+
+
+    <script src="./appjs/zepto.js"></script>
+    <script src="./appjs/app.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+      App.controller('home', function (page) {
+        // put stuff here
+      });
+
+      App.controller('page2', function (page) {
+        // put stuff here
+      });
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+  </body>
+</html>
